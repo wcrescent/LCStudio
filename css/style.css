@@ -1,0 +1,102 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	padding: 10px 100px;
+	box-sizing: border-box;
+	transition: .5s;
+}
+nav.black{
+	background: rgba(0,0,0, 8);
+	height: 60px;
+	padding: 10px 50px;
+}
+nav .logo{
+	float: left;
+}
+nav .logo img{
+	height: 80px;
+	transition: .5s;
+}
+nav.black .logo img{
+	height: 50px;
+	transition: .5s;
+}
+nav ul{
+	float: right;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+nav ul li{
+	list-style: none;
+}
+nav ul li a{
+	position: relative;
+	line-height: 80px;
+	color: #fff;
+	padding: 5px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .4s;
+}
+nav ul li a:hover{
+	color: #ffff56;
+}
+nav ul li a:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #ffff56;
+	z-index: -1;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .2s;
+}
+nav ul li a:hover:before{
+	transform: scaleX(1);
+	transform-origin: right;
+}
+nav ul li a:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #ffff56;
+	z-index: -1;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .2s;
+}
+nav ul li a:hover:after{
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+nav.black ul li a{
+	line-height: 50px;
+	color: #fff;
+}
+section.sec1{
+	width: 100%;
+	height: 100vh;
+	background: url(../img/bg1.jpg);
+	background-size: cover;
+}
+section.sec2{
+	width: 100%;
+	height: 100vh;
+	background: url(../img/bg2.jpg);
+	background-size: cover;
+}
